@@ -1,0 +1,7 @@
+{
+  "name": "Caraway",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

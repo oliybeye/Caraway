@@ -1,3 +1,6 @@
+import { RegisterPage } from './../register/register';
+import { HomePage } from './../home/home';
+import { UserProvider } from './../../providers/user/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +17,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  username: string;
+  password: string;
+  isUserLogged: boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private user: UserProvider) {
+      this.username = 'oliyadbeyene';
+      this.password = 'pass';
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
+
+  signIn() {
+    
+    if(this.user.validateUser(this.username, this.password)){
+      this.navCtrl.setRoot(HomePage);
+    }
+    
+  }
+
+  signUp() {
+    this.navCtrl.push(RegisterPage);
+  }
 }

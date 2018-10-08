@@ -6,13 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content padding padding style="background:url('assets/imgs/asphalt-cars-clouds-1307546.jpg') no-repeat center;background-size:cover;"
+  id="page1">
+  <div class="signInInput">
+    <div class="logo">
+      <p>Caraway</p>
+    </div>
+    <div class="inputs">
+      <ion-item class="username">
+        <ion-label stacked>Username</ion-label>
+        <ion-input [(ngModel)]="username"></ion-input>
+      </ion-item>
+      
+      <ion-item class="password">
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </div>
+    <div class="signButtons">
+      <button ion-button margin-right (click)="signUp()">
+        SIGN UP
+      </button>
+      
+      <button ion-button color="secondary" (click)="signIn()">
+        SIGN IN
+      </button>
+    </div>
+    <p class="logo-des">Recruting made easy</p>
+  </div>
 </ion-content>

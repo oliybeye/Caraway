@@ -1,3 +1,33 @@
 page-login {
+    max-resolution: 400px;
+}
 
+.signInInput{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.signButtons{
+    margin-top: 1rem;
+}
+
+.inputs{
+    margin: auto;
+    width: 25rem;
+}
+
+.password{
+    margin-top: 1rem;
+}
+
+.logo{
+    font-size: 5em;
+}
+
+.logo-des{
+    font-size: 2em;
+    color: white;
 }
